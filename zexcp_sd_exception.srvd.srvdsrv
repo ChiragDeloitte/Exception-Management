@@ -1,0 +1,13 @@
+@EndUserText.label: 'Utilities Core - Exceptions Service Definition'
+define service zexcp_sd_exception {
+  expose zexcp_c_bpem as BpemChecks;
+  expose zexcp_c_hist_bpem as HistCategory;
+  expose zexcp_c_hist_io as HistCheckGrp;
+  expose zexcp_c_hist_perc as HistPercent;
+  expose zexcp_c_imr_cat as IMRCategory;
+  expose zexcp_c_imr_rates as IMRRate;
+  expose zexcp_c_jobsched as JobSched;
+  expose zexcp_c_outsort_amnt as OutsortAmount;
+  expose zexcp_c_outsort_bpem as OutsortCategory;
+  expose zexcp_c_outsort_io as OutsortCheckGrp;
+}

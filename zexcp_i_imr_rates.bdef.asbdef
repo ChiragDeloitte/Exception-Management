@@ -1,0 +1,32 @@
+unmanaged implementation in class zbp_excp_i_imr_rates unique;
+strict;
+
+define behavior for zexcp_i_imr_rates alias IMRRate
+implementation in class zbp_excp_i_imr_rates unique
+//late numbering
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  create;
+  update;
+  delete;
+
+  mapping for zexcp_imr_rates
+  {
+    RateCategory = rate_category;
+    Season       = season;
+    MonthlyAve   = monthly_ave;
+    ToleranceH   = tolerance_h;
+    ToleranceL   = tolerance_l;
+    WinterStart  = winter_start;
+    WinterEnd    = winter_end;
+    SummerStart  = summer_start;
+    SummerEnd    = summer_end;
+    ClientGuid   = client_guid;
+    CreatedBy    = created_by;
+    CreatedOn    = created_on;
+    ChangedBy    = changed_by;
+    ChangedOn    = changed_on;
+  }
+}

@@ -1,0 +1,25 @@
+unmanaged implementation in class zbp_excp_i_outsort_io unique;
+strict;
+
+define behavior for zexcp_i_outsort_io alias OutsortCheckGrp
+implementation in class zbp_excp_i_outsort_io unique
+//late numbering
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  create;
+  update;
+  delete;
+
+  mapping for zexcp_outsort_io
+  {
+    CheckGrp   = check_grp;
+    Ctype      = ctype;
+    ClientGuid = client_guid;
+    CreatedBy  = created_by;
+    CreatedOn  = created_on;
+    ChangedBy  = changed_by;
+    ChangedOn  = changed_on;
+  }
+}
