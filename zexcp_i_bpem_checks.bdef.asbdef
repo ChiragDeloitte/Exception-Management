@@ -1,0 +1,30 @@
+unmanaged implementation in class zbp_excp_i_bpem_checks unique;
+strict;
+
+define behavior for zexcp_i_bpem_checks alias BPEMChecks
+implementation in class zbp_excp_i_bpem_checks unique
+//late numbering
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  create;
+  update;
+  delete;
+
+  function ValidateInvoiceOutsort result [1] zexcp_a_validate_result;
+  function ValidateImplausibleMeterRead result [1] zexcp_a_validate_result;
+  function ValidateExceptions result [1] zexcp_a_validate_result;
+
+  mapping for zexcp_bpem_check
+  {
+    KeyID        = key_id;
+    IsActive     = is_active;
+    IsMaintained = is_maintained;
+    Description  = description;
+    CreatedBy    = created_by;
+    CreatedOn    = created_on;
+    ChangedBy    = changed_by;
+    ChangedOn    = changed_on;
+  }
+}

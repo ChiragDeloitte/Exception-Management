@@ -1,0 +1,5 @@
+CLASS zbp_excp_i_outsort_io DEFINITION PUBLIC ABSTRACT FINAL FOR BEHAVIOR OF zexcp_i_outsort_io.
+ENDCLASS.
+
+CLASS zbp_excp_i_outsort_io IMPLEMENTATION.
+ENDCLASS.

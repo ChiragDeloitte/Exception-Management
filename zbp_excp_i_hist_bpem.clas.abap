@@ -1,0 +1,5 @@
+CLASS zbp_excp_i_hist_bpem DEFINITION PUBLIC ABSTRACT FINAL FOR BEHAVIOR OF zexcp_i_hist_bpem.
+ENDCLASS.
+
+CLASS zbp_excp_i_hist_bpem IMPLEMENTATION.
+ENDCLASS.

@@ -1,0 +1,5 @@
+CLASS zbp_excp_i_hist_perc DEFINITION PUBLIC ABSTRACT FINAL FOR BEHAVIOR OF zexcp_i_hist_perc.
+ENDCLASS.
+
+CLASS zbp_excp_i_hist_perc IMPLEMENTATION.
+ENDCLASS.

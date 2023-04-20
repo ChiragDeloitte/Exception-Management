@@ -1,0 +1,24 @@
+unmanaged implementation in class zbp_excp_i_hist_bpem unique;
+strict;
+
+define behavior for zexcp_i_hist_bpem alias HistCategory
+implementation in class zbp_excp_i_hist_bpem unique
+//late numbering
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  create;
+  update;
+  delete;
+
+  mapping for zexcp_hist_bpem
+  {
+    Category   = category;
+    ClientGuid = client_guid;
+    CreatedBy  = created_by;
+    CreatedOn  = created_on;
+    ChangedBy  = changed_by;
+    ChangedOn  = changed_on;
+  }
+}
